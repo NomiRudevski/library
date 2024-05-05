@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+</head>
+<body>
+    <nav class="navigation">
+        <li class="head"><a href="index.html" class="menu-link">Library</a></li> 
+        <ul class="menu-list">
+            <li class="menu-items"><a href="loans.html" class="menu-link">Borrowed books</a></li>
+            <li class="menu-items"><a href="books.html" class="menu-link">All books</a></li>
+            <li class="menu-items"><a href="user_books.html" class="menu-link">My books</a></li>
+        </ul>
+    </nav>
+    <div style="margin-top: 40px;" id = "borowedBooksList"></div>
+    <div id = "infoL" class="container" onclick = "closemodule('infoL')">
+    </div>
+    
+</body>
+<script>
+    load(document.location.pathname, "borowedBooksList")
+</script>
+</html>
