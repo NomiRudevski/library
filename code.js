@@ -129,13 +129,13 @@ function load(page, id) {
     let temp = [];
     let functionA = "";
     let display = '<ol>'
-    if (page == '/loans.html') {
+    if (page.includes('/loans.html')) {
         temp = borrowedBooks.concat(userBooks);
         functionA = "info"
-    } else if (page == '/books.html') {
+    } else if (page.includes('/books.html')) {
         temp = availableBooks;
         functionA = "borrowBook"
-    } else if (page == '/user_books.html') {
+    } else if (page.includes('/user_books.html')) {
         temp = userBooks;
         functionA = "returnBook"
     }
@@ -185,17 +185,17 @@ function info(i, page) {
     let infoID
     let tempArray
     let tempButton
-    if (page == '/loans.html'){
+    if (page.includes('/loans.html')){
         infoID ="infoL"
         tempArray = borrowedBooks.concat(userBooks)
         tempButton = ""
-    }else if(page == '/books.html'){
+    }else if(page.includes('/books.html')){
         infoID = "infoB"
         tempArray = availableBooks
         tempButton = `
         <button onclick = "borrowBook(${ind})" class = "d-button"> borrow </button>
         `
-    }else if(page == '/user_books.html'){
+    }else if(page.includes('/user_books.html')){
         infoID = "infoU"
         tempArray = userBooks
         tempButton = `
